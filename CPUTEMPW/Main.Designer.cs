@@ -39,6 +39,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -47,6 +49,7 @@
             this.dataGridView1.DataSource = this.cpuTempBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(288, 283);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -59,12 +62,14 @@
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tempDataGridViewTextBoxColumn
             // 
             this.tempDataGridViewTextBoxColumn.DataPropertyName = "Temp";
             this.tempDataGridViewTextBoxColumn.HeaderText = "Temp";
             this.tempDataGridViewTextBoxColumn.Name = "tempDataGridViewTextBoxColumn";
+            this.tempDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Main
             // 
@@ -84,9 +89,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource cpuTempBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tempDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource cpuTempBindingSource;
     }
 }
 

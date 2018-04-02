@@ -9,6 +9,6 @@ namespace CPUTEMPW
     class CpuTemp
     {
         public string Name { get; set; }
-        public double Temp { get; set; }
+        public float Temp { get; set; }
     }
 }
