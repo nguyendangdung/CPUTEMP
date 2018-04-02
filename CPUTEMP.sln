@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPUTEMP", "CPUTEMP\CPUTEMP.csproj", "{1916DF4D-321F-43CD-92D1-5E52D9B3DE0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPUTEMPW", "CPUTEMPW\CPUTEMPW.csproj", "{6CB6F100-8846-453B-A5A4-9B62196FD10B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1916DF4D-321F-43CD-92D1-5E52D9B3DE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1916DF4D-321F-43CD-92D1-5E52D9B3DE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1916DF4D-321F-43CD-92D1-5E52D9B3DE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB6F100-8846-453B-A5A4-9B62196FD10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB6F100-8846-453B-A5A4-9B62196FD10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB6F100-8846-453B-A5A4-9B62196FD10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB6F100-8846-453B-A5A4-9B62196FD10B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
