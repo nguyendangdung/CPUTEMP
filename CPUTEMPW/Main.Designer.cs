@@ -30,9 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cpuTempBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.runBtn = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tempDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpuTempBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpuTempBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -50,12 +51,18 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(288, 283);
+            this.dataGridView1.Size = new System.Drawing.Size(288, 238);
             this.dataGridView1.TabIndex = 0;
             // 
-            // cpuTempBindingSource
+            // runBtn
             // 
-            this.cpuTempBindingSource.DataSource = typeof(CPUTEMPW.CpuTemp);
+            this.runBtn.Location = new System.Drawing.Point(111, 264);
+            this.runBtn.Name = "runBtn";
+            this.runBtn.Size = new System.Drawing.Size(75, 36);
+            this.runBtn.TabIndex = 1;
+            this.runBtn.Text = "Run";
+            this.runBtn.UseVisualStyleBackColor = true;
+            this.runBtn.Click += new System.EventHandler(this.runBtn_Click);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -71,14 +78,22 @@
             this.tempDataGridViewTextBoxColumn.Name = "tempDataGridViewTextBoxColumn";
             this.tempDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // cpuTempBindingSource
+            // 
+            this.cpuTempBindingSource.DataSource = typeof(CPUTEMPW.CpuTemp);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 312);
+            this.Controls.Add(this.runBtn);
             this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Main";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpuTempBindingSource)).EndInit();
@@ -92,6 +107,7 @@
         private System.Windows.Forms.BindingSource cpuTempBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tempDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button runBtn;
     }
 }
 

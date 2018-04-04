@@ -16,6 +16,7 @@ namespace CPUTEMPW
     {
         BindingList<CpuTemp> _temps = new BindingList<CpuTemp>();
         private readonly Computer _computer;
+        private bool _closing = false;
         public Main()
         {
             InitializeComponent();
@@ -27,18 +28,14 @@ namespace CPUTEMPW
             cpuTempBindingSource.DataSource = _temps;
         }
 
-        private async void Main_Load(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
-            await Task.Run(() => DoSomething(_computer));
+            
         }
 
         private void DoSomething(Computer com)
         {
-            while (true)
-            {
-                Thread.Sleep(1000);
-                GetSystemInfo(com);
-            }
+            GetSystemInfo(com);
         }
 
         void GetSystemInfo(Computer computer)
@@ -56,6 +53,15 @@ namespace CPUTEMPW
                     });
                 });
             }
+        }
+
+        private void runBtn_Click(object sender, EventArgs e)
+        {
+            DoSomething(_computer);
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
     }
 }
